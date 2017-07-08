@@ -48,7 +48,7 @@ gulp.task('csslibs', ['sass'], function(){
 
 gulp.task('browser-sync', function(){
 	browserSync({
-		proxy: "portfolio/app",
+		proxy: "tajam/app",
 		notify: false
 	});
 });
