@@ -1,0 +1,474 @@
+$f-play: 'Playfair Display', serif
+$f-roboto: 'Roboto', sans-serif
+$link-color: #00e0d0
+$tablet: 960
+$mobile: 768
+
+body
+  font-family: $f-roboto
+  font-size: 14px
+
+h2
+  text-transform: uppercase
+  font-family: $f-play
+  text-align: center
+  font-weight: black
+
+p
+  margin-bottom: 30px
+
+a
+  text-decoration: none
+  color: #242424
+
+.is-mobile.show
+  display: block
+
+.clearfix::after
+  clear: both
+  display: table
+  content: ""
+
+.flex
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+
+.btn
+  text-transform: uppercase
+  color: $link-color
+  text-align: center
+  border: 1px solid $link-color
+  font-size: 16px
+  padding: 14px
+  border-radius: 1px
+  display: table
+  width: auto
+  text-decoration: none
+  transition: .5s
+  &:hover
+    color: #242424
+    background: $link-color
+  +r($mobile)
+    width: 100%
+    margin-bottom: 30px
+    color: #242424
+    background: $link-color
+    &:hover
+      background: none
+      color: $link-color
+
+.container
+  width: 940px
+  padding: 0px 10px
+  margin: 0px auto
+  +r($tablet)
+    width: 95%
+  +r($mobile)
+    width: 95%
+
++r($mobile)
+  .mobile-nav
+    display: block
+    width: 40px
+    height: 40px
+    margin: 5px 5px 0px 0px
+    z-index: 3
+    cursor: pointer
+    span
+      display: block
+      width: 100%
+      height: 1px
+      background: #fff
+      margin: 10px 0px
+  .mobile-nav.active
+    position: relative
+    span:first-child
+      transform: rotate(45deg)
+      position: absolute
+      top: 5px
+
+    span:nth-child(2)
+      transform: rotate(-45deg)
+      position: absolute
+      top: 5px
+    span:last-child
+      display: none
+  .is-mobile
+    display: none
+    width: 100%
+    position: fixed
+    background: linear-gradient(to right, rgba(37, 225, 198, 0.85), rgba(66, 139, 160, 0.92))
+    bottom: 0
+    left: 0
+    height: 100vh
+    li:first-child
+      margin-top: 25%
+    li
+      width: 100%
+      text-align: center
+      margin: 10px 0px
+
+.slider
+  position: relative
+  height: 100vh
+  nav
+    position: absolute
+    top: 15px
+    width: 100%
+    z-index: 5
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    ul
+      li
+        display: inline-block
+        margin-right: 15px
+        margin-top: 20px
+        a
+          text-transform: uppercase
+          color: #fff
+          font-weight: 900
+          transition: .5s
+          &:hover
+            color: #00e0d0
+
+  .btn
+    margin: 0px auto
+
+  .item
+    display: table
+  &__line
+    width: 50px
+    height: 1px
+    background: #00e0d0
+    margin: 30px auto
+  &__description
+    width: 780px
+    margin: 0px auto
+    color: #FFF
+    text-align: center
+    margin-bottom: 50px
+    +r($tablet)
+      width: 100%
+    +r($mobile)
+      width: 100%
+
+  &__item
+    width: 100%
+    height: 100vh
+    .container
+      margin-top: 230px
+      +r($mobile)
+        margin-top: 130px
+    h1
+      font-size: 32px
+      color: #fff
+      font-family: $f-play
+      text-align: center
+    &--one, &--two
+      background: url(../img/slide-1.jpg) no-repeat
+      width: 100%
+      height: 100vh
+
+.story
+  padding: 70px 0
+  img
+    float: left
+    margin-left: 30px
+    display: block
+    +r($mobile)
+      float: none
+      margin: 70px auto
+      display: block
+  &__content
+    float: right
+    width: 57%
+    +r($tablet)
+      width: 100%
+      float: none
+    +r($mobile)
+      width: 100%
+      float: none
+    h2
+      margin-bottom: 30px
+      text-align: left
+      +r($mobile)
+        text-align: center
+
+.video-story
+  background: url(../img/bg-video.jpg) no-repeat
+  min-height: 550px
+  width: 100%
+  display: table
+  &__link
+    width: 160px
+    display: block
+    margin: 200px auto 0
+    color: #FFF
+    font-family: $f-roboto
+    font-weight: 900
+    text-transform: uppercase
+    text-align: center
+
+    img
+      display: block
+      margin: 0 auto 30px
+
+.dec
+  margin-top: 17px
+  text-align: center
+  &::after
+    content: ""
+    width: 50px
+    height: 2px
+    display: block
+    margin: 18px auto 50px
+    background: #c6c4c9
+
+.expertise
+  padding: 70px 0px
+  &__description
+    margin-top: 17px
+    text-align: center
+  &__list
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    li
+      width: 306px
+      +r($mobile)
+        width: 100%
+      img
+        display: block
+        margin: 37px auto 37px
+      b
+        margin-bottom: 25px
+        text-align: center
+        color: #413d4b
+        width: 100%
+        display: block
+      p
+        text-align: center
+        width: 255px
+        display: block
+        margin: 0 auto 37px
+    li:nth-child(1),
+    li:nth-child(2),
+    li:nth-child(4),
+    li:nth-child(5)
+      border-right: 1px solid #ebebeb
+      +r($mobile)
+        border: 0
+      +r($tablet)
+        border: 0
+    li:nth-child(1),
+    li:nth-child(2),
+    li:nth-child(3)
+      border-bottom: 1px solid #ebebeb
+      +r($mobile)
+        border: 0
+      +r($tablet)
+        border: 0
+.team
+  background: url(../img/bg-team.jpg) no-repeat
+  min-height: 710px
+  width: 100%
+  padding: 70px 0px
+  color: #FFF
+  background-size: cover
+  &__list
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__item
+    width: 219px
+    border: 1px solid #78758c
+    margin-bottom: 70px
+    +r($mobile)
+      width: 90%
+      margin: 0 auto 70px
+      img
+        width: 100%
+    b
+      display: block
+      margin: 20px auto 12px
+      text-align: center
+    span
+      display: block
+      margin: 0 auto 20px
+      text-align: center
+      color: #78758c
+  &__prelink
+    margin-bottom: 26px
+    text-align: center
+  &__link
+    margin: 0 auto 0px
+
+.our-works
+  padding: 70px 0px
+  .container
+    position: relative
+  h2
+    text-align: left
+  &__link
+    position: absolute
+    right: 0
+    top: 10px
+  &__list
+    background: #f7f7f7
+    margin: 70px 0px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-wrap: wrap
+    img
+      width: 16.66%
+      // height: 200px
+  .btn
+    margin: 0 auto
+
+.feedback
+  min-height: 500px
+  background: url(../img/bg-feedback.jpg) no-repeat
+  display: table
+  width: 100%
+  +r($mobile)
+    display: inline-block
+
+.fb-slider
+  margin-top: 70px
+  color: #fff
+  text-align: center
+  position: relative
+  &__item
+    padding-top: 70px
+    width: 778px
+    margin: 0 auto
+    +r($mobile)
+      width: 100%
+    &::before
+      content: ""
+      position: absolute
+      left: 50%
+      margin-left: -10px
+      width: 32px
+      height: 26px
+      background: url(../img/feedback-after.png)
+      top: 0
+  &__name
+    display: block
+    width: 100%
+    text-align: center
+    margin-top: 70px
+
+.news
+  padding: 70px 0px
+  display: table
+  width: 100%
+  h2
+    text-align: left
+    margin-bottom: 30px
+    width: 100%
+  &__form
+    width: 50%
+    float: left
+    +r($tablet)
+      width: 100%
+      float: none
+    input[type="text"], textarea
+      width: 100%
+      border: 1px solid #e5e5e5
+      padding: 15px 20px
+      margin-bottom: 20px
+    input[type="submit"]
+      background: none
+      &:hover
+        background: $link-color
+
+
+  &__affilate
+    width: 50%
+    float: right
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    +r($mobile)
+      width: 100%
+
+  &__left, &__right
+    width: 50%
+    img
+      display: block
+      margin: 0px auto 50px
+    +r($mobile)
+      width: 100%
+
+footer
+  background: url(../img/bg-footer.jpg) no-repeat
+  min-height: 400px
+  display: inline-block
+  width: 100%
+  padding: 70px 0px
+  color: #fff
+.logo-footer
+  margin-bottom: 25px
+.footer
+  &__description
+    width: 290px
+  &__social
+    width: 293px
+    b
+      display: block
+      margin: 20px 0px
+  &__subscribe
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    input
+      background: none
+      border: 1px solid #9d97af
+      padding: 15px
+      margin-right: 10px
+      color: #FFF
+    button
+      padding: 10px 20px
+
+  &__contact
+    width: 270px
+    b
+      display: block
+      margin: 20px 0px
+    &--list
+      display: block
+      position: relative
+      li
+        padding-left: 30px
+        margin-bottom: 20px
+        &:first-child::before
+          content: ""
+          position: absolute
+          width: 18px
+          height: 20px
+          background: url(../img/point.png) no-repeat
+          display: block
+          left: 0
+        &:last-child::before
+          content: ""
+          position: absolute
+          width: 18px
+          height: 20px
+          background: url(../img/phone.png) no-repeat
+          display: block
+          left: 0
+  &__navigation
+    display: inline-block
+    width: 100%
