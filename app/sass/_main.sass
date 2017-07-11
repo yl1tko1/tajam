@@ -291,11 +291,11 @@ a
     width: 219px
     border: 1px solid #78758c
     margin-bottom: 70px
+    img
+      width: 100%
     +r($mobile)
       width: 90%
       margin: 0 auto 70px
-      img
-        width: 100%
     b
       display: block
       margin: 20px auto 12px
@@ -321,6 +321,9 @@ a
     position: absolute
     right: 0
     top: 10px
+    transition: .5s
+    &:hover
+      color: $link-color
   &__list
     background: #f7f7f7
     margin: 70px 0px
@@ -417,42 +420,68 @@ footer
   min-height: 400px
   display: inline-block
   width: 100%
-  padding: 70px 0px
+  padding: 70px 0px 0
   color: #fff
+  background-size: cover
+  .flex
+    +r($mobile)
+      display: block
 .logo-footer
   margin-bottom: 25px
 .footer
   &__description
     width: 290px
+    +r($mobile)
+      width: 100%
   &__social
     width: 293px
+    +r($mobile)
+      width: 100%
     b
       display: block
-      margin: 20px 0px
+      margin: 20px 0px 35px
   &__subscribe
     display: -webkit-flex
     display: -ms-flex
     display: flex
+    margin-bottom: 25px
+    +r($mobile)
+      width: 100%
+      display: block
     input
       background: none
       border: 1px solid #9d97af
       padding: 15px
       margin-right: 10px
       color: #FFF
+      +r($mobile)
+        width: 100%
+        background: #f7f7f7
+        border-radius: 0
+        margin-bottom: 10px
     button
       padding: 10px 20px
+      transition: .5s
+      +r($mobile)
+        width: 100%
+        background-color: $link-color
+      &:hover
+        opacity: 0.8
 
   &__contact
     width: 270px
+    margin-bottom: 35px
     b
       display: block
-      margin: 20px 0px
+      margin: 20px 0px 37px
     &--list
       display: block
       position: relative
       li
         padding-left: 30px
         margin-bottom: 20px
+        a
+          color: #FFF
         &:first-child::before
           content: ""
           position: absolute
@@ -472,3 +501,39 @@ footer
   &__navigation
     display: inline-block
     width: 100%
+
+.footer-social
+  width: 35px
+  height: 35px
+  margin-right: 8px
+  border: 1px solid #FFF
+  border-radius: 50%
+  display: inline-block
+  transition: .5s
+  &:hover
+    opacity: 0.8
+  img
+    display: block
+    margin: 10px auto
+
+.notify
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  margin-top: 35px
+  +r($mobile)
+    width: 100%
+    display: block
+    text-align: center
+    margin: 35px 0px
+    .copy
+      margin-top: 35px
+  &__item
+    display: inline
+    margin-right: 34px
+    a
+      color: #fff
+      transition: .5s
+      &:hover
+        color: $link-color
