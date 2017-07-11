@@ -201,11 +201,11 @@
      <div class="container">
        <div class="news__form">
          <h2>GIVE US A GOOD NEWS</h2>
-         <form action="">
+         <form action="send.php" method="post">
             <input type="text" placeholder="Name">
             <input type="text" placeholder="Emain">
             <input type="text" placeholder="Subject">
-           <textarea name="" id="" cols="30" rows="10"></textarea>
+           <textarea name="message" id="message" cols="30" rows="10"></textarea>
            <input class="btn" type="submit" value="Submit">
          </form>
        </div>
@@ -249,7 +249,7 @@
      </div>
      <div class="footer__social">
        <b>STAY IN TOUCH</b>
-       <form action="" class="footer__subscribe">
+       <form action="send.php" method="post" class="footer__subscribe">
          <input type="text" placeholder="Subscribe our newsletter">
          <button type="submit">
            <img src="img/send.png" alt="">
